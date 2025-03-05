@@ -1,69 +1,40 @@
 # FitT Design Decisions
 
+## Scope
+
+This is as of Prototype Alpha stage.
+
+Demonstrates counting steps with the motion sensor and showing those on the display.
+
 ## Microcontroller
 
-Will use a member of the STM32 family because of familiarity, experience, availability, and lots of choices within the same framework.
+[STM32C011F6P6](https://www.st.com/en/microcontrollers-microprocessors/stm32c011f6.html) in a TSOP-20 package.
 
-Want:
+Microcontroller made breadboard friendly through TSOP-DIP adapter board.
 
-- STM32 series
-- low power consumption
-- no major computational or peripheral requirements
-- GPIO count less than 16
-- minimum 32kB flash
-- package that can be soldered by hand
-- more than 1000 in stock at major distributors
-- minimum 5y future availability
+Using HAL framework.
 
-Best suited would be L0 series, low power, don't expect heavy computation. Or a C0 with slightly higher power consumption but lower prices.
+Programming through USB ST-Link.
 
 ## Step counting sensor
 
-Will use a 3-axis MEMS accelerometer.
-
-Have used ST LIS3DH before, availability good, library available, BOB too.
-
-Or Bosch BMA400, very low power, specially designed for this kind of wearable applications.
+[Bosch BMA400](https://www.bosch-sensortec.com/products/motion-sensors/accelerometers/bma400/) with hackish simplified step counter algorithm.
 
 ## Display
 
-LCD with backlight can have good contrast but is monochrome, looks kinda old fashioned.
-
-TFTs are color and cheap, but not great outdoors and in the sunlight.
-
-Will test an OLED as a high contrast option.
+Display: SPI-connected [Crystalfontz CFAL9664B-F-B1](https://www.crystalfontz.com/product/cfal9664bfb1-graphic-96x64-color-oled-module) 96×64 Graphic Color OLED Display ([datasheet](assets/CFAL9664B-F-B1Datasheet.pdf)). Requires ultrasonic bonding of flat cable to custom PCB. Also boost regulator for panel supply. Using [CFAL9664BFB1E11](https://www.crystalfontz.com/product/cfal9664bfb1e11-96x64-color-oled-with-carrier-board) carrier board that does all that and has a 2.54mm pitch pin header. Their [schematic](assets/CFA-10083_0v2_Schematic.pdf) helps a lot. Using Anothermist [DISPLAY library](https://github.com/anothermist/DISPLAYS) SSD1331_HAL library.
 
 Display will need to be fitted with enclosure an need a gasket to seal against rainwater.
 
-## Battery
+## Power Supply
 
-Standard LiPo cell, as big as we can fit for maximum runtime.
+From Wall DC breadboard adapter.
 
-Monitoring with a fuel gauge chip.
+## Firmware
 
-Charging with a standard 1S LiPo charger chip.
+Hardware test code snippets with simple demonstration of step counter to display.
 
-USB-C power-only fixed max 500mA interface.
+## Future Improvements
 
-Charge status indication: LEDs next to charger port? Or use display? But then that must be on while charging.
-
-USB-C plug will have to be sealed or have a rubber cap to keep rain water out.
-
-## Power Conservation
-
-Turn display off when not in use.
-
-Controller too?
-
-Use motion sensor to wake up.
-
-## User Interface Buttons
-
-Momentary push buttons can be mounted behind push-through rubber caps for sealing.
-
-
-## Design Study with GPS and Cell Modem
-
-![](assets/gps_cell_study.jpg)
-
-As a visualization to see what can be fitted to the wrist.
+- If possible, use [eTFT library](https://github.com/Bodmer/TFT_eSPI) with great functionality and performance.
+- Use BMA400's internal step counter algorithm with wakeup. Can sleep the entire system including display and use interrupt wakeup from sensor.

@@ -2,9 +2,11 @@
 
 Follow development progress in the [logbook](Logbook.md)
 
-Check the [project definition](ProjectDefinition.pdf) for project goals and parameters.
+Check the [project definition](ProjectDefinition.md) for project goals and parameters.
 
-Several prototypes are scheduled throughout development. Check the [Prototype Plan](PrototypePlan.pdf) for details.
+Several prototypes are scheduled throughout development. Check the [Prototype Plan](PrototypePlan.md) for details.
+
+The [testing plan](TestingPlan.md) grows along with the implementation.
 
 Read the [user documentation](UserDocumentation.md) for details how to set up and operate the tracker.
 

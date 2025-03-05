@@ -1,17 +1,3 @@
-[comment]: # (myclient=NJIT)
-[comment]: # (date=2025-01-21)
-[comment]: # (copyrightdate=$date)
-[comment]: # (title=ECET 430 - Demo Project FitT - Project Definition)
-[comment]: # (author=[Christian Hansis](mailto:christian.hansis@njit.edu))
-[comment]: # (myemail=ch444@njit.edu)
-[comment]: # (mybanner=$templatepath/blank.png)
-[comment]: # (clientbanner=$workingpath/assets/njit_logo.png)
-[comment]: # (headerlogo=$workingpath/assets/njit_logo_small_square.png)
-[comment]: # (toc=false)
-[comment]: # (headspace=-1cm)
-[comment]: # (mybannersize=width=0cm,height=0cm)
-[comment]: # (clientbannersize=width=15cm,height=4cm)
-
 # Purpose
 
 This project aims to implement a wearable fitness tracker.

@@ -1,17 +1,3 @@
-[comment]: # (myclient=NJIT)
-[comment]: # (date=2024-02-04)
-[comment]: # (copyrightdate=$date)
-[comment]: # (title=ECET 430 - Prototype Plan - FitT)
-[comment]: # (author=[Christian Hansis](mailto:christian.hansis@njit.edu))
-[comment]: # (myemail=ch444@njit.edu)
-[comment]: # (mybanner=$templatepath/blank.png)
-[comment]: # (clientbanner=$workingpath/assets/njit_logo.png)
-[comment]: # (headerlogo=$workingpath/assets/njit_logo_small_square.png)
-[comment]: # (toc=false)
-[comment]: # (headspace=-2cm)
-[comment]: # (mybannersize=width=0cm,height=0cm)
-[comment]: # (clientbannersize=width=15cm,height=4cm)
-
 # Purpose
 
 This document shows planned prototyping steps for the **FitT Fitness Tracker Demo Project**.

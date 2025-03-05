@@ -1,5 +1,7 @@
 # Demo Project: Fitness Tracker
 
+![](documentation/assets/PrototypeAlpha.jpeg)
+
 This is a project to demonstrate certain items of developing a hardware/software product.
 
 The **FitT** fitness tracker is a fictional product.
@@ -22,14 +24,13 @@ See the [user documentation](documentation/UserDocumentation.md).
 
 ## Design
 
-See the [design decision document](documentation/DesignDecisions.md).
+See the [design documentation](documentation/README.md).
 
 ## Credit
 
-This project was made possible by borrowing from great designs, including:
+This project was made possible by borrowing from work available in the public domain, including:
 
-- ABC's wearable widget, https://github.com/example/project
-- XYZ's battery management, https://github.com/example/otherproject
+- [BSTRobin's forum post](https://community.bosch-sensortec.com/mems-sensors-forum-jrmujtaw/post/bma400-library-for-stm32-8Wp5OBEzLzPqqNP) on the BMA400.
 
 ## Author
 
